@@ -1,6 +1,7 @@
 package br.senai.sp.jandira.projetofile.screens
 
 import android.content.Context
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,10 +17,12 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddCircle
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -54,14 +57,14 @@ fun HomeScreen(navegacao: NavHostController?){
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(440.dp)
-
+            .height(440.dp),
     ){
 
         Image(
             painter = painterResource(R.drawable.background),
             contentDescription = "",
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize(),
             contentScale = ContentScale.Crop
         )
         Column (
@@ -71,16 +74,25 @@ fun HomeScreen(navegacao: NavHostController?){
             horizontalAlignment = Alignment.CenterHorizontally
 
         ){
-            Text(
-                text = stringResource(
-                    R.string.details
-                ),
-                modifier = Modifier
-                    .padding(15.dp),
-                color = Color.White,
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Normal
-            )
+            Row {
+                Icon(
+                    modifier = Modifier
+                        .padding(end = 100.dp),
+                    imageVector = Icons.Default.ArrowBack,
+                    contentDescription = "",
+                    tint = Color(0xFFEC8666)
+                )
+                Text(
+                    text = stringResource(
+                        R.string.details
+                    ),
+                    modifier = Modifier
+                        .padding(15.dp, end = 135.dp),
+                    color = Color.White,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Normal
+                )
+            }
 
             Image(
                 painter = painterResource(
@@ -116,8 +128,9 @@ fun HomeScreen(navegacao: NavHostController?){
             )
             Row (){
                 Card (
-                    shape = RoundedCornerShape(
-                        15.dp
+                    border = BorderStroke(
+                        width = 2.dp,
+                        color = Color(0xFFD9D2E3),
                     ),
                     modifier = Modifier
                         .padding(top = 20.dp)
@@ -126,7 +139,7 @@ fun HomeScreen(navegacao: NavHostController?){
                     Row(
                         modifier = Modifier
                             .background(
-                                color = Color(0xFF673AB7)
+                                color = Color(0xFF1D4077)
                             )
                             .padding(6.dp)
                     ) {
@@ -151,8 +164,9 @@ fun HomeScreen(navegacao: NavHostController?){
                     }
                 }
                 Card (
-                    shape = RoundedCornerShape(
-                        15.dp
+                    border = BorderStroke(
+                        width = 2.dp,
+                        color = Color(0xFFD9D2E3),
                     ),
                     modifier = Modifier
                         .padding(top = 20.dp)
@@ -161,7 +175,7 @@ fun HomeScreen(navegacao: NavHostController?){
                     Row(
                         modifier = Modifier
                             .background(
-                                color = Color(0xFF673AB7)
+                                color = Color(0xFF1D4077)
                             )
                             .padding(6.dp)
                     ) {
@@ -187,8 +201,9 @@ fun HomeScreen(navegacao: NavHostController?){
                 }
 
                 Card (
-                    shape = RoundedCornerShape(
-                        15.dp
+                    border = BorderStroke(
+                        width = 2.dp,
+                        color = Color(0xFFD9D2E3),
                     ),
                     modifier = Modifier
                         .padding(top = 20.dp)
@@ -197,7 +212,7 @@ fun HomeScreen(navegacao: NavHostController?){
                     Row(
                         modifier = Modifier
                             .background(
-                                color = Color(0xFF673AB7)
+                                color = Color(0xFF1D4077)
                             )
                             .padding(6.dp)
                     ) {
@@ -222,8 +237,9 @@ fun HomeScreen(navegacao: NavHostController?){
                     }
                 }
                 Card (
-                    shape = RoundedCornerShape(
-                        15.dp
+                    border = BorderStroke(
+                        width = 2.dp,
+                        color = Color(0xFFD9D2E3),
                     ),
                     modifier = Modifier
                         .padding(top = 20.dp)
@@ -232,9 +248,9 @@ fun HomeScreen(navegacao: NavHostController?){
                     Row(
                         modifier = Modifier
                             .background(
-                                color = Color(0xFF673AB7)
+                                color = Color(0xFF1D4077)
                             )
-                            .padding(5.dp)
+                            .padding(5.dp),
                     ) {
                         Icon(
                             imageVector = Icons.Default.Star,
@@ -259,6 +275,7 @@ fun HomeScreen(navegacao: NavHostController?){
                 }
 
             }
+
 
         }
 
