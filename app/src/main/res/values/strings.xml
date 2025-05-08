@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Projeto File</string>
+    <string name="details">Details</string>
+    <string name="name">Jenny Wilson</string>
+    <string name="function">Sr. UI/UX Designer</string>
+    <string name="email">Email</string>
+    <string name="call">Call</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="favorite">Favorite</string>
+    <string name="email2">Email</string>
+    <string name="official">Official</string>
+    <string name="personal">Personal</string>
+    <string name="phone">Phone Number</string>
+    <string name="mobile">Mobile</string>
+    <string name="team">Team</string>
+    <string name="project">Project Operation Team</string>
+    <string name="leads">Leads by</string>
+    <string name="darrell">Darrel Steward</string>
+    <string name="add">Add to contact</string>
+</resources>
