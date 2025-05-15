@@ -53,12 +53,16 @@ fun HomeScreen(navegacao: NavHostController?){
     val  userFile = context
         //Mode_Private deixa o seu programa privado para que outros programas nao acessem os dados do seu
         .getSharedPreferences("UserFile", Context.MODE_PRIVATE)
+Column (
+
+) {
+
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(440.dp),
-    ){
+    ) {
 
         Image(
             painter = painterResource(R.drawable.background),
@@ -67,13 +71,13 @@ fun HomeScreen(navegacao: NavHostController?){
                 .fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Column (
+        Column(
             modifier = Modifier
                 .padding(vertical = 48.dp, horizontal = 16.dp),
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
 
-        ){
+        ) {
             Row {
                 Icon(
                     modifier = Modifier
@@ -126,8 +130,8 @@ fun HomeScreen(navegacao: NavHostController?){
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Normal
             )
-            Row (){
-                Card (
+            Row() {
+                Card(
                     border = BorderStroke(
                         width = 2.dp,
                         color = Color(0xFFD9D2E3),
@@ -163,7 +167,7 @@ fun HomeScreen(navegacao: NavHostController?){
                         }
                     }
                 }
-                Card (
+                Card(
                     border = BorderStroke(
                         width = 2.dp,
                         color = Color(0xFFD9D2E3),
@@ -200,7 +204,7 @@ fun HomeScreen(navegacao: NavHostController?){
                     }
                 }
 
-                Card (
+                Card(
                     border = BorderStroke(
                         width = 2.dp,
                         color = Color(0xFFD9D2E3),
@@ -236,7 +240,7 @@ fun HomeScreen(navegacao: NavHostController?){
                         }
                     }
                 }
-                Card (
+                Card(
                     border = BorderStroke(
                         width = 2.dp,
                         color = Color(0xFFD9D2E3),
@@ -268,7 +272,8 @@ fun HomeScreen(navegacao: NavHostController?){
                                     R.string.favorite
                                 ),
                                 color = Color(0xFFD9D2E3),
-                                fontSize = 15.sp
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.SemiBold
                             )
                         }
                     }
@@ -280,6 +285,141 @@ fun HomeScreen(navegacao: NavHostController?){
         }
 
     }
+    Column (
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 20.dp, start = 15.dp)
+    ){
+        Row(
+            modifier = Modifier
+
+        ) {
+            Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = "",
+                tint = Color(0xFFEC8666)
+            )
+            Column(
+                modifier = Modifier
+                    .weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+
+                    text = stringResource(
+                        R.string.email,
+                    ),
+                    modifier = Modifier
+                        .padding(end = 300.dp, top = 2.dp),
+                    color = Color(0xFF000000),
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Text(
+                    text = stringResource(
+                        R.string.official,
+                    ),
+                    modifier = Modifier
+                        .padding(end = 300.dp, top = 15.dp),
+                    color = Color(0xFF7B7B7C),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Normal
+                )
+                Text(
+                    text = stringResource(
+                        R.string.personal,
+                    ),
+                    modifier = Modifier
+                        .padding(end = 300.dp, top = 15.dp),
+                    color = Color(0xFF7B7B7C),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Normal
+                )
+                Card(
+                    modifier = Modifier
+                        .height(11.2.dp)
+                        .width(500.dp)
+                        .padding(top = 10.dp, end = 30.dp),
+
+                    shape = RoundedCornerShape(
+                        15.dp
+                    ),
+                    colors = CardDefaults
+                        .cardColors(
+                            containerColor = Color(0xFFF5AD30)
+                        )
+
+                ){
+
+                }
+                Row(
+                    modifier = Modifier
+
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Email,
+                        contentDescription = "",
+                        tint = Color(0xFFEC8666)
+                    )
+                    Column(
+                        modifier = Modifier
+                            .weight(1f),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+
+                            text = stringResource(
+                                R.string.email,
+                            ),
+                            modifier = Modifier
+                                .padding(end = 300.dp, top = 2.dp),
+                            color = Color(0xFF000000),
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                        Text(
+                            text = stringResource(
+                                R.string.official,
+                            ),
+                            modifier = Modifier
+                                .padding(end = 300.dp, top = 15.dp),
+                            color = Color(0xFF7B7B7C),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Normal
+                        )
+                        Text(
+                            text = stringResource(
+                                R.string.personal,
+                            ),
+                            modifier = Modifier
+                                .padding(end = 300.dp, top = 15.dp),
+                            color = Color(0xFF7B7B7C),
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Normal
+                        )
+                        Card(
+                            modifier = Modifier
+                                .height(11.2.dp)
+                                .width(500.dp)
+                                .padding(top = 10.dp, end = 30.dp),
+
+                            shape = RoundedCornerShape(
+                                15.dp
+                            ),
+                            colors = CardDefaults
+                                .cardColors(
+                                    containerColor = Color(0xFFF5AD30)
+                                )
+
+                        ){}
+
+                    }
+                }
+
+            }
+        }
+    }
+}
 
 }
 
